@@ -1,6 +1,6 @@
 const app = require('express')()
 const server = require('http').createServer(app)
-const io = require('socket.io')(server, {cors: {origin: 'https://matchat.vercel.app/:9001'}})
+const io = require('socket.io')(server, {cors: {origin: 'https://matchat.vercel.app'}})
 
 const PORT = 9001
 
