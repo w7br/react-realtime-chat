@@ -10,7 +10,7 @@ export default function Join({setChatVisibility, setSocket}) {
   const handleSubmit = async () => {
     const username = usernameRef.current.value
     if(!username.trim()) return
-    const socket = await io.connect('https://matchat.vercel.app/:9001')
+    const socket = await io.connect('https://matchat.vercel.app/api')
     socket.emit('set_username', username)
     setSocket(socket)
     setChatVisibility(true)
